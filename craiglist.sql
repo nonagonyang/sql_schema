@@ -8,7 +8,8 @@ CREATE DATABASE craigslist;
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     username TEXT NOT NULL,
-    region_id INTEGER REFERENCES regions
+    encrypted_password  password NOT NULL,
+    preferred_region_id INTEGER REFERENCES regions
 );
 
 CREATE TABLE regions(
